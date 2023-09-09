@@ -6,4 +6,6 @@ export const usuariosRoutes = () => {
 
     route.post('/signup', controller.signUp)
     route.post('/login', controller.logIn)
+
+    return route
 }

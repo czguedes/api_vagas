@@ -31,7 +31,18 @@ class UsuarioController {
         }
     }
 
-    async logIn(req: Request, res: Response) { }
+    async logIn(req: Request, res: Response) {
+        try {
+            const { username, password } = req.body
+
+            //testar credenciais
+
+            //retornar se o login é válido ou não
+
+        } catch (error: any) {
+            return httpHelper.badRequestError(res, error.toString())
+        }
+    }
 }
 
 export const controller = new UsuarioController()
