@@ -1,10 +1,11 @@
-import { Column, Entity, PrimaryColumn } from "typeorm";
+
+import { Column, CreateDateColumn, Entity, PrimaryColumn, UpdateDateColumn } from "typeorm";
 
 @Entity({ name: 'usuarios' })
 export class UserEntity {
 
     @PrimaryColumn({ type: 'uuid', name: 'id' })
-    idUser!: string
+    id!: string
 
     @Column({ type: 'varchar', length: 100 })
     name!: string
@@ -20,4 +21,10 @@ export class UserEntity {
 
     @Column({ type: 'int' })
     userType!: number
+
+    @CreateDateColumn()
+    createdAt!: Date
+
+    @UpdateDateColumn()
+    updatedAt!: Date
 }

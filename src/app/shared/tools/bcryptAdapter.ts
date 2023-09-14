@@ -1,5 +1,5 @@
 import * as bcryptLib from 'bcrypt';
-import { bcryptEnvs } from '../envs';
+import { bcryptEnvs } from '../../envs';
 
 class BcryptAdater {
     // gerar Hash - utilização: CADASTRO DO USUARIO

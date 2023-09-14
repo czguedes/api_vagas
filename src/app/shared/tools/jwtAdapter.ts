@@ -1,5 +1,6 @@
 import jwtLib from 'jsonwebtoken';
-import { jwtEnvs } from '../envs';
+import { jwtEnvs } from '../../envs';
+
 
 class JWTAdapter {
     // criar o token - utilização: LOGIN USER

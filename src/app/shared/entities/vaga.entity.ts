@@ -1,11 +1,11 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryColumn, UpdateDateColumn } from "typeorm";
 import { UserEntity } from "./usuario.entity";
 
 @Entity({ name: 'vagas' })
 export class VagaEntity {
 
     @PrimaryColumn({ type: 'uuid', name: 'id' })
-    idVaga!: string
+    id!: string
 
     @Column({ type: 'text' })
     descricao!: string
@@ -22,10 +22,17 @@ export class VagaEntity {
     @Column({ type: 'int', name: 'num_candidatos', nullable: true })
     numCandidatos!: number
 
-    @ManyToOne(() => UserEntity, (r) => r.idUser)
+    @CreateDateColumn()
+    createdAt!: Date
+
+    @UpdateDateColumn()
+    updatedAt!: Date
+
+    @ManyToOne(() => UserEntity, (r) => r.id)
     @JoinColumn({
         name: 'id_recrutador',
         referencedColumnName: 'id'
     })
     recrutador!: UserEntity
+
 }

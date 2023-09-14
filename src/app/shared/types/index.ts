@@ -1,4 +1,6 @@
-type UserType = 'admin' | 'recrutador' | 'candidato' | undefined
+import { RecrutadorUser } from "../../models"
+
+type UserType = 'admin' | 'recrutador' | 'candidato'
 
 type UserDTO = {
     name: string
@@ -6,5 +8,13 @@ type UserDTO = {
     username: string
 }
 
-export { UserDTO, UserType }
+type VagaDTO = {
+    descricao: string,
+    nomeEmpresa: string,
+    dataLimite: Date,
+    recrutador: RecrutadorUser,
+    numCandidatos?: number
+}
+
+export { UserDTO, UserType, VagaDTO }
 

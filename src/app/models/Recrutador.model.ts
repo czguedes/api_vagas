@@ -1,4 +1,5 @@
-import { UserDTO } from "../shared"
+
+import { UserDTO } from "../shared/types"
 import { User } from "./Usuario.model"
 
 export class RecrutadorUser extends User {

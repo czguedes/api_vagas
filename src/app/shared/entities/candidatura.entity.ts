@@ -14,14 +14,14 @@ export class CandidaturaEntity {
     @Column({ default: false })
     sucesso!: boolean
 
-    @ManyToOne(() => VagaEntity, (v) => v.idVaga)
+    @ManyToOne(() => VagaEntity, (v) => v.id)
     @JoinColumn({
         name: 'id_vaga',
         referencedColumnName: 'id'
     })
     idVaga!: VagaEntity
 
-    @ManyToOne(() => UserEntity, (u) => u.idUser)
+    @ManyToOne(() => UserEntity, (u) => u.id)
     @JoinColumn({
         name: 'id_candidato',
         referencedColumnName: 'id'

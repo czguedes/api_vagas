@@ -1,0 +1,5 @@
+export * from './Admin.model'
+export * from './Candidato.model'
+export * from './Recrutador.model'
+export * from './Usuario.model'
+export * from './Vaga.model'

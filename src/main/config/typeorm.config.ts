@@ -9,6 +9,7 @@ export const dataSource = new DataSource({
     schema: 'public',
     entities: [rootDir + '/app/shared/entities/**/*'],
     migrations: [rootDir + '/app/shared/migrations/**/*'],
+    logging: false,
     synchronize: false,
     ssl: {
         rejectUnauthorized: false,

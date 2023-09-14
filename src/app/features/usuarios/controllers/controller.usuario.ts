@@ -1,6 +1,7 @@
 import { Request, Response } from "express"
-import { bcrypt } from "../../../shared/bcryptAdapter"
-import { httpHelper } from "../../../shared/httpHelper"
+
+import { httpHelper } from "../../../shared/tools"
+import { bcrypt } from "../../../shared/tools/bcryptAdapter"
 
 interface Usuario {
     username: string
